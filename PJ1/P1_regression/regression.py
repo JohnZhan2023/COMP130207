@@ -8,7 +8,6 @@ def sample_data(sample_num):
     x = np.linspace(0,1,sample_num) # sample 100 points from -10 to 10 randomly
     # [0.84421305, -0.28919214, -0.95003651, -0.63587365, -0.65292033, 1.00880848]
     # [-0.42198864, -0.94267747, -0.13719203, -0.33263249,  0.59505294,  0.62779226]
-    print(f"the sampled x is {x}")
     y = np.sin(x*2*np.pi) # the function we want to approximate
 
     return x, y
@@ -22,8 +21,8 @@ def function(x, params):
 # we define the regression model
 def regression(x, y, params_num, learning_rate, epochs, lamda):
     # although we can directly use the numpy function to solve the linear regression problem, we still implement it by ourselves
-    params = np.random.normal(0,1,params_num) # initialize the weights
-    #params = np.array([-0.04063483, 8.31634849, -16.38149829, -4.80867479, 4.59907882, 7.89030372, 5.11392639, 1.40958474, -0.60948956, -2.7400939, -2.44248929, -0.37625659]) # initialize the weights
+    # params = np.random.normal(0,1,params_num) # initialize the weights
+    params = np.array([-0.04063483, 8.31634849, -16.38149829, -4.80867479, 4.59907882, 7.89030372, 5.11392639, 1.40958474, -0.60948956, -2.7400939, -2.44248929, -0.37625659]) # initialize the weights
     # [0.84421305, -0.28919214, -0.95003651, -0.63587365, -0.65292033, 1.00880848]
     # [-0.42198864, -0.94267747, -0.13719203, -0.33263249,  0.59505294,  0.62779226]
     # [ 0.27608881,  4.32725789, -7.4155481,  -5.27747108, -0.68728641,  3.58638638, 4.08512184,  3.3550655,   2.77465056,  0.19513605, -1.74370396, -3.4137205 ]
@@ -86,9 +85,9 @@ def show_result(params):
     
 def main():
     print("****start the regression****")
-    sample_num = 50
+    sample_num = 100
     x, y = sample_data(sample_num=sample_num)
-    params = regression(x, y, 16, 0.015, 10000, 0) 
+    params = regression(x, y, 12, 0.01, 1000, 0.0) 
     show_result(params)
                     
             
