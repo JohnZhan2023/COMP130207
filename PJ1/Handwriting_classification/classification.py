@@ -149,7 +149,7 @@ def main():
     x, y, x_test, y_test = load_data()
     input = x.shape[1]
     output = y.shape[1]
-    hidden_layer = 2048
+    hidden_layer = 1024
     batch_size = 16
     learning_rate = 0.01
     epochs = 200

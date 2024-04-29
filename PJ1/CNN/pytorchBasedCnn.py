@@ -43,16 +43,25 @@ def load_data():
     return x, y, x_test, y_test
 
 class MyDataset(Dataset):
-    def __init__(self, data_type='train'):
+    def __init__(self, data_type='train', transform=None):
         x, y, x_test, y_test = load_data()
         if data_type == 'train':
             self.x, self.y = x.astype(float), y.astype(float)
         else:
             self.x, self.y = x_test.astype(float), y_test.astype(float)
+        self.transform = transform
+    
     def __len__(self):
         return len(self.x)
+    
     def __getitem__(self, idx):
-        return self.x[idx], self.y[idx]
+        sample_x, sample_y = self.x[idx], self.y[idx]
+        if self.transform:
+            sample_x = np.array(self.transform(Image.fromarray(sample_x[0])))
+        sample_x=sample_x.squeeze()
+        sample_x = np.expand_dims(sample_x, axis=0)
+
+        return sample_x, sample_y
     
 class CNN(nn.Module):
     def __init__(self):
@@ -75,7 +84,7 @@ class CNN(nn.Module):
         self.output = nn.Sequential(
             nn.Linear(64*7*7, 1024),
             nn.ReLU(),
-            nn.Dropout(0.5),
+            # nn.Dropout(0.5),
             nn.Linear(1024, 12)
                                     ) # 64*7*7 is the size of the output of the last layer
         self.softmax = nn.Softmax(dim=1)
@@ -112,14 +121,22 @@ def plot_losses(loss_lists, acc_list, labels, params_str):
     plt.show()
           
 def main():
-    epochs = 60
+    epochs = 40
     batch_size = 32
     learning_rate = 0.001
     
     cnn=CNN()
     loss_function = nn.CrossEntropyLoss()
     optimizer = optim.Adam(cnn.parameters(), lr=learning_rate)
-    dataset=MyDataset()
+    
+    tranform_list=[
+        transforms.RandomRotation(degrees=30),  # 在 -30 到 +30 度之间随机旋转
+        transforms.RandomPerspective(distortion_scale=0.5),  # 随机透视变换
+        transforms.ToTensor(),  # 转换为张量
+        ]
+    data_transforms = transforms.RandomApply(tranform_list,p=0.3)
+    dataset=MyDataset(transform=data_transforms)
+    
     test_dataset=MyDataset('test')
     dataLoader=DataLoader(dataset=dataset, batch_size=batch_size, shuffle=True)
     dataLoader_test=DataLoader(dataset=test_dataset, batch_size=batch_size, shuffle=True)
@@ -137,6 +154,17 @@ def main():
             loss.backward()
             optimizer.step()
             loss_.append(loss.item())
+            
+            # 获取第一个图像
+            image = x[0]
+            # 将张量转换为 PIL 图像
+            pil_image = transforms.ToPILImage()(image)
+            # 生成图像保存路径
+            image_path = os.path.join("DataAug", f'image_{j}.png')
+            # 保存图像文件
+            pil_image.save(image_path)
+            
+            
         cnn.eval()
         for j, (x, y) in enumerate(dataLoader_test):
             output = cnn.forward(x.float())
@@ -151,7 +179,7 @@ def main():
 
                 
     params_str = f'learning rate: {learning_rate}, batch size: {batch_size}, epochs: {epochs}'
-    torch.save(cnn, f'Pytorch_based_CNN_MLP_dropout_{learning_rate}_{batch_size}_{epochs}.pth')
+    torch.save(cnn, f'Pytorch_based_CNN_MLP_DAG_{learning_rate}_{batch_size}_{epochs}.pth')
     plot_losses([loss_list],acc_list, ['loss'], params_str)
                 
     
