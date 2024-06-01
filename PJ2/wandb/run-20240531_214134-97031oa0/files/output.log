@@ -1,0 +1,35 @@
+
+the map is  ['B-CONT', 'B-EDU', 'B-LOC', 'B-NAME', 'B-ORG', 'B-PRO', 'B-RACE', 'B-TITLE', 'E-CONT', 'E-EDU', 'E-LOC', 'E-NAME', 'E-ORG', 'E-PRO', 'E-RACE', 'E-TITLE', 'M-CONT', 'M-EDU', 'M-LOC', 'M-NAME', 'M-ORG', 'M-PRO', 'M-RACE', 'M-TITLE', 'O', 'S-NAME', 'S-ORG', 'S-RACE']
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 93%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏         | 14/15 [01:19<00:05,  5.63s/it]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 15/15 [01:24<00:00,  5.62s/it]
+  0%|                                                                                                                                                             | 0/15 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "BiLSTM_CRF_main.py", line 58, in <module>
+    main(args)
+  File "BiLSTM_CRF_main.py", line 41, in main
+    bilstm_crf.train(train_data, train_labels, epochs=10)
+  File "/cephfs/zhanjh/COMP130207/PJ2/BiLSTM_CRF.py", line 196, in train
+    loss = self.neg_log_likelihood(padded_sentences, padded_tags, sentence_lengths)
+  File "/cephfs/zhanjh/COMP130207/PJ2/BiLSTM_CRF.py", line 150, in neg_log_likelihood
+    feats = self._lstm_forward(sentence, sentence_lengths)
+  File "/cephfs/zhanjh/COMP130207/PJ2/BiLSTM_CRF.py", line 55, in _lstm_forward
+    lstm_out, self.hidden = self.lstm(embeds2, self.hidden)
+  File "/root/miniconda3/envs/ai/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/ai/lib/python3.8/site-packages/torch/nn/modules/rnn.py", line 815, in forward
+    result = _VF.lstm(input, batch_sizes, hx, self._flat_weights, self.bias,
+RuntimeError: cuDNN error: CUDNN_STATUS_EXECUTION_FAILED

@@ -1,0 +1,17 @@
+
+the map is  ['B-CONT', 'B-EDU', 'B-LOC', 'B-NAME', 'B-ORG', 'B-PRO', 'B-RACE', 'B-TITLE', 'E-CONT', 'E-EDU', 'E-LOC', 'E-NAME', 'E-ORG', 'E-PRO', 'E-RACE', 'E-TITLE', 'M-CONT', 'M-EDU', 'M-LOC', 'M-NAME', 'M-ORG', 'M-PRO', 'M-RACE', 'M-TITLE', 'O', 'S-NAME', 'S-ORG', 'S-RACE']
+  0%|                                                                                                                                                             | 0/15 [00:02<?, ?it/s]
+Traceback (most recent call last):
+  File "BiLSTM_CRF_main.py", line 58, in <module>
+    main(args)
+  File "BiLSTM_CRF_main.py", line 41, in main
+    bilstm_crf.train(train_data, train_labels, epochs=10)
+  File "/cephfs/zhanjh/COMP130207/PJ2/BiLSTM_CRF.py", line 196, in train
+    loss = self.neg_log_likelihood(padded_sentences, padded_tags, sentence_lengths)
+  File "/cephfs/zhanjh/COMP130207/PJ2/BiLSTM_CRF.py", line 151, in neg_log_likelihood
+    forward_score = self._forward_alg(feats)
+  File "/cephfs/zhanjh/COMP130207/PJ2/BiLSTM_CRF.py", line 80, in _forward_alg
+    forward_var = torch.cat(alphas_t).t()
+  File "/root/miniconda3/envs/ai/lib/python3.8/site-packages/torch/fx/traceback.py", line 41, in format_stack
+    return traceback.format_list(traceback.extract_stack()[:-1])
+KeyboardInterrupt

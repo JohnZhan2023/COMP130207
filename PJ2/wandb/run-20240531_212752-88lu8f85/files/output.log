@@ -1,0 +1,37 @@
+
+the map is  ['B-CONT', 'B-EDU', 'B-LOC', 'B-NAME', 'B-ORG', 'B-PRO', 'B-RACE', 'B-TITLE', 'E-CONT', 'E-EDU', 'E-LOC', 'E-NAME', 'E-ORG', 'E-PRO', 'E-RACE', 'E-TITLE', 'M-CONT', 'M-EDU', 'M-LOC', 'M-NAME', 'M-ORG', 'M-PRO', 'M-RACE', 'M-TITLE', 'O', 'S-NAME', 'S-ORG', 'S-RACE']
+
+  7%|█████████▉                                                                                                                                           | 1/15 [00:06<01:36,  6.92s/it]/root/miniconda3/envs/ai/lib/python3.8/site-packages/torch/autograd/graph.py:744: UserWarning: Error detected in CudnnRnnBackward0. Traceback of forward call that caused the error:
+  File "BiLSTM_CRF_main.py", line 58, in <module>
+    main(args)
+  File "BiLSTM_CRF_main.py", line 41, in main
+    bilstm_crf.train(train_data, train_labels, epochs=10)
+  File "/cephfs/zhanjh/COMP130207/PJ2/BiLSTM_CRF.py", line 196, in train
+    loss = self.neg_log_likelihood(padded_sentences, padded_tags, sentence_lengths)
+  File "/cephfs/zhanjh/COMP130207/PJ2/BiLSTM_CRF.py", line 150, in neg_log_likelihood
+    feats = self._lstm_forward(sentence, sentence_lengths)
+  File "/cephfs/zhanjh/COMP130207/PJ2/BiLSTM_CRF.py", line 55, in _lstm_forward
+    lstm_out, self.hidden = self.lstm(embeds2, self.hidden)
+  File "/root/miniconda3/envs/ai/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/ai/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/ai/lib/python3.8/site-packages/torch/nn/modules/rnn.py", line 914, in forward
+    result = _VF.lstm(input, batch_sizes, hx, self._flat_weights, self.bias,
+ (Triggered internally at ../torch/csrc/autograd/python_anomaly_mode.cpp:111.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+  7%|█████████▉                                                                                                                                           | 1/15 [00:12<03:00, 12.90s/it]
+Traceback (most recent call last):
+  File "BiLSTM_CRF_main.py", line 58, in <module>
+    main(args)
+  File "BiLSTM_CRF_main.py", line 41, in main
+    bilstm_crf.train(train_data, train_labels, epochs=10)
+  File "/cephfs/zhanjh/COMP130207/PJ2/BiLSTM_CRF.py", line 198, in train
+    loss.backward(retain_graph=True)
+  File "/root/miniconda3/envs/ai/lib/python3.8/site-packages/torch/_tensor.py", line 525, in backward
+    torch.autograd.backward(
+  File "/root/miniconda3/envs/ai/lib/python3.8/site-packages/torch/autograd/__init__.py", line 267, in backward
+    _engine_run_backward(
+  File "/root/miniconda3/envs/ai/lib/python3.8/site-packages/torch/autograd/graph.py", line 744, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+RuntimeError: one of the variables needed for gradient computation has been modified by an inplace operation: [torch.cuda.FloatTensor [8, 8]] is at version 2; expected version 1 instead. Hint: the backtrace further above shows the operation that failed to compute its gradient. The variable in question was changed in there or anywhere later. Good luck!

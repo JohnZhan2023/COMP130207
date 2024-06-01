@@ -1,0 +1,30 @@
+2024-05-31 21:44:50,453 INFO    MainThread:34360 [wandb_setup.py:_flush():76] Current SDK version is 0.17.0
+2024-05-31 21:44:50,453 INFO    MainThread:34360 [wandb_setup.py:_flush():76] Configure stats pid to 34360
+2024-05-31 21:44:50,453 INFO    MainThread:34360 [wandb_setup.py:_flush():76] Loading settings from /root/.config/wandb/settings
+2024-05-31 21:44:50,453 INFO    MainThread:34360 [wandb_setup.py:_flush():76] Loading settings from /cephfs/zhanjh/COMP130207/PJ2/wandb/settings
+2024-05-31 21:44:50,453 INFO    MainThread:34360 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-05-31 21:44:50,453 INFO    MainThread:34360 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-05-31 21:44:50,453 INFO    MainThread:34360 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'PJ2/BiLSTM_CRF_main.py', 'program_abspath': '/cephfs/zhanjh/COMP130207/PJ2/BiLSTM_CRF_main.py', 'program': 'BiLSTM_CRF_main.py'}
+2024-05-31 21:44:50,453 INFO    MainThread:34360 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-05-31 21:44:50,453 INFO    MainThread:34360 [wandb_init.py:_log_setup():520] Logging user logs to /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_214450-46rd5s01/logs/debug.log
+2024-05-31 21:44:50,453 INFO    MainThread:34360 [wandb_init.py:_log_setup():521] Logging internal logs to /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_214450-46rd5s01/logs/debug-internal.log
+2024-05-31 21:44:50,453 INFO    MainThread:34360 [wandb_init.py:init():560] calling init triggers
+2024-05-31 21:44:50,453 INFO    MainThread:34360 [wandb_init.py:init():567] wandb.init called with sweep_config: {}
+config: {}
+2024-05-31 21:44:50,454 INFO    MainThread:34360 [wandb_init.py:init():610] starting backend
+2024-05-31 21:44:50,454 INFO    MainThread:34360 [wandb_init.py:init():614] setting up manager
+2024-05-31 21:44:50,459 INFO    MainThread:34360 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-05-31 21:44:50,461 INFO    MainThread:34360 [wandb_init.py:init():622] backend started and connected
+2024-05-31 21:44:50,468 INFO    MainThread:34360 [wandb_init.py:init():711] updated telemetry
+2024-05-31 21:44:50,487 INFO    MainThread:34360 [wandb_init.py:init():744] communicating run to backend with 90.0 second timeout
+2024-05-31 21:44:51,692 INFO    MainThread:34360 [wandb_run.py:_on_init():2396] communicating current version
+2024-05-31 21:44:56,696 INFO    MainThread:34360 [wandb_run.py:_on_init():2405] got version response 
+2024-05-31 21:44:56,697 INFO    MainThread:34360 [wandb_init.py:init():795] starting run threads in backend
+2024-05-31 21:44:58,598 INFO    MainThread:34360 [wandb_run.py:_console_start():2374] atexit reg
+2024-05-31 21:44:58,598 INFO    MainThread:34360 [wandb_run.py:_redirect():2229] redirect: wrap_raw
+2024-05-31 21:44:58,598 INFO    MainThread:34360 [wandb_run.py:_redirect():2294] Wrapping output streams.
+2024-05-31 21:44:58,599 INFO    MainThread:34360 [wandb_run.py:_redirect():2319] Redirects installed.
+2024-05-31 21:44:58,601 INFO    MainThread:34360 [wandb_init.py:init():838] run started, returning control to user process
+2024-05-31 21:44:58,602 INFO    MainThread:34360 [wandb_run.py:_config_callback():1376] config_cb None None {'data': 'Chinese'}
+2024-05-31 21:45:01,568 INFO    MainThread:34360 [wandb_run.py:_config_callback():1376] config_cb None None {'data_num': 1845, 'label_num': 30, 'hidden_dim': 4, 'embedding_dim': 8, 'batch_size': 256, 'learning_rate': 0.01, 'weight_decay': 0.0001, 'optimizer': 'SGD'}
+2024-05-31 21:46:38,756 WARNING MsgRouterThr:34360 [router.py:message_loop():77] message_loop has been closed

@@ -1,0 +1,907 @@
+2024-05-31 22:33:57,601 INFO    StreamThr :43086 [internal.py:wandb_internal():85] W&B internal server running at pid: 43086, started at: 2024-05-31 22:33:57.599754
+2024-05-31 22:33:57,604 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status
+2024-05-31 22:33:57,608 INFO    WriterThread:43086 [datastore.py:open_for_write():87] open: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/run-t2d1qx0r.wandb
+2024-05-31 22:33:57,610 DEBUG   SenderThread:43086 [sender.py:send():378] send: header
+2024-05-31 22:33:57,627 DEBUG   SenderThread:43086 [sender.py:send():378] send: run
+2024-05-31 22:33:58,652 INFO    SenderThread:43086 [dir_watcher.py:__init__():211] watching files in: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files
+2024-05-31 22:33:58,652 INFO    SenderThread:43086 [sender.py:_start_run_threads():1123] run started: t2d1qx0r with start time 1717166037.598469
+2024-05-31 22:33:58,664 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: check_version
+2024-05-31 22:33:58,664 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: check_version
+2024-05-31 22:34:00,003 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: run_start
+2024-05-31 22:34:00,019 DEBUG   HandlerThread:43086 [system_info.py:__init__():26] System info init
+2024-05-31 22:34:00,019 DEBUG   HandlerThread:43086 [system_info.py:__init__():41] System info init done
+2024-05-31 22:34:00,019 INFO    HandlerThread:43086 [system_monitor.py:start():194] Starting system monitor
+2024-05-31 22:34:00,020 INFO    SystemMonitor:43086 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-05-31 22:34:00,020 INFO    HandlerThread:43086 [system_monitor.py:probe():214] Collecting system info
+2024-05-31 22:34:00,021 INFO    SystemMonitor:43086 [interfaces.py:start():188] Started cpu monitoring
+2024-05-31 22:34:00,022 INFO    SystemMonitor:43086 [interfaces.py:start():188] Started disk monitoring
+2024-05-31 22:34:00,024 INFO    SystemMonitor:43086 [interfaces.py:start():188] Started gpu monitoring
+2024-05-31 22:34:00,025 INFO    SystemMonitor:43086 [interfaces.py:start():188] Started memory monitoring
+2024-05-31 22:34:00,028 INFO    SystemMonitor:43086 [interfaces.py:start():188] Started network monitoring
+2024-05-31 22:34:00,066 DEBUG   HandlerThread:43086 [system_info.py:probe():150] Probing system
+2024-05-31 22:34:00,074 DEBUG   HandlerThread:43086 [system_info.py:_probe_git():135] Probing git
+2024-05-31 22:34:00,089 DEBUG   HandlerThread:43086 [system_info.py:_probe_git():143] Probing git done
+2024-05-31 22:34:00,090 DEBUG   HandlerThread:43086 [system_info.py:probe():198] Probing system done
+2024-05-31 22:34:00,090 DEBUG   HandlerThread:43086 [system_monitor.py:probe():223] {'os': 'Linux-5.4.0-177-generic-x86_64-with-glibc2.17', 'python': '3.8.19', 'heartbeatAt': '2024-05-31T14:34:00.066511', 'startedAt': '2024-05-31T14:33:57.584505', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'BiLSTM_CRF_main.py', 'codePathLocal': 'BiLSTM_CRF_main.py', 'codePath': 'PJ2/BiLSTM_CRF_main.py', 'git': {'remote': 'https://github.com/JohnZhan2023/COMP130207.git', 'commit': '12c064b65229fca38373611212a3ff27acc461e5'}, 'email': 'zhanjiahao384@gmail.com', 'root': '/cephfs/zhanjh/COMP130207', 'host': 'zhanjh0-0', 'username': 'root', 'executable': '/root/miniconda3/envs/ai/bin/python', 'cpu_count': 64, 'cpu_count_logical': 128, 'cpu_freq': {'current': 923.8014374999998, 'min': 800.0, 'max': 3400.0}, 'cpu_freq_per_core': [{'current': 900.015, 'min': 800.0, 'max': 3400.0}, {'current': 799.837, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 799.88, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 798.601, 'min': 800.0, 'max': 3400.0}, {'current': 798.523, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 3300.0, 'min': 800.0, 'max': 3400.0}, {'current': 799.862, 'min': 800.0, 'max': 3400.0}, {'current': 798.548, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.168, 'min': 800.0, 'max': 3400.0}, {'current': 798.504, 'min': 800.0, 'max': 3400.0}, {'current': 900.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 798.513, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 801.486, 'min': 800.0, 'max': 3400.0}, {'current': 831.895, 'min': 800.0, 'max': 3400.0}, {'current': 801.481, 'min': 800.0, 'max': 3400.0}, {'current': 798.464, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 801.489, 'min': 800.0, 'max': 3400.0}, {'current': 798.542, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 931.6, 'min': 800.0, 'max': 3400.0}, {'current': 809.93, 'min': 800.0, 'max': 3400.0}, {'current': 925.11, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 923.861, 'min': 800.0, 'max': 3400.0}, {'current': 812.878, 'min': 800.0, 'max': 3400.0}, {'current': 895.019, 'min': 800.0, 'max': 3400.0}, {'current': 799.879, 'min': 800.0, 'max': 3400.0}, {'current': 801.486, 'min': 800.0, 'max': 3400.0}, {'current': 900.0, 'min': 800.0, 'max': 3400.0}, {'current': 1261.31, 'min': 800.0, 'max': 3400.0}, {'current': 900.0, 'min': 800.0, 'max': 3400.0}, {'current': 896.877, 'min': 800.0, 'max': 3400.0}, {'current': 798.507, 'min': 800.0, 'max': 3400.0}, {'current': 799.861, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 847.476, 'min': 800.0, 'max': 3400.0}, {'current': 835.172, 'min': 800.0, 'max': 3400.0}, {'current': 3159.702, 'min': 800.0, 'max': 3400.0}, {'current': 804.065, 'min': 800.0, 'max': 3400.0}, {'current': 848.587, 'min': 800.0, 'max': 3400.0}, {'current': 1234.087, 'min': 800.0, 'max': 3400.0}, {'current': 873.76, 'min': 800.0, 'max': 3400.0}, {'current': 904.72, 'min': 800.0, 'max': 3400.0}, {'current': 1026.107, 'min': 800.0, 'max': 3400.0}, {'current': 900.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 979.819, 'min': 800.0, 'max': 3400.0}, {'current': 1443.23, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 900.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 798.555, 'min': 800.0, 'max': 3400.0}, {'current': 798.561, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 801.451, 'min': 800.0, 'max': 3400.0}, {'current': 801.489, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 801.492, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 3300.0, 'min': 800.0, 'max': 3400.0}, {'current': 801.489, 'min': 800.0, 'max': 3400.0}, {'current': 800.084, 'min': 800.0, 'max': 3400.0}, {'current': 801.322, 'min': 800.0, 'max': 3400.0}, {'current': 798.611, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 1228.22, 'min': 800.0, 'max': 3400.0}, {'current': 798.548, 'min': 800.0, 'max': 3400.0}, {'current': 798.589, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 798.598, 'min': 800.0, 'max': 3400.0}, {'current': 851.612, 'min': 800.0, 'max': 3400.0}, {'current': 801.396, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 801.428, 'min': 800.0, 'max': 3400.0}, {'current': 798.545, 'min': 800.0, 'max': 3400.0}, {'current': 798.606, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 1087.893, 'min': 800.0, 'max': 3400.0}, {'current': 1086.604, 'min': 800.0, 'max': 3400.0}, {'current': 1086.115, 'min': 800.0, 'max': 3400.0}, {'current': 799.984, 'min': 800.0, 'max': 3400.0}, {'current': 1087.139, 'min': 800.0, 'max': 3400.0}, {'current': 1180.785, 'min': 800.0, 'max': 3400.0}, {'current': 835.265, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 846.433, 'min': 800.0, 'max': 3400.0}, {'current': 1104.553, 'min': 800.0, 'max': 3400.0}, {'current': 819.793, 'min': 800.0, 'max': 3400.0}, {'current': 881.053, 'min': 800.0, 'max': 3400.0}, {'current': 800.1, 'min': 800.0, 'max': 3400.0}, {'current': 800.022, 'min': 800.0, 'max': 3400.0}, {'current': 800.0, 'min': 800.0, 'max': 3400.0}, {'current': 800.017, 'min': 800.0, 'max': 3400.0}, {'current': 848.797, 'min': 800.0, 'max': 3400.0}, {'current': 1798.056, 'min': 800.0, 'max': 3400.0}, {'current': 1060.796, 'min': 800.0, 'max': 3400.0}, {'current': 816.816, 'min': 800.0, 'max': 3400.0}, {'current': 2590.592, 'min': 800.0, 'max': 3400.0}, {'current': 1571.76, 'min': 800.0, 'max': 3400.0}, {'current': 1228.591, 'min': 800.0, 'max': 3400.0}, {'current': 998.863, 'min': 800.0, 'max': 3400.0}, {'current': 1676.722, 'min': 800.0, 'max': 3400.0}, {'current': 801.379, 'min': 800.0, 'max': 3400.0}, {'current': 935.928, 'min': 800.0, 'max': 3400.0}, {'current': 1088.45, 'min': 800.0, 'max': 3400.0}, {'current': 1382.744, 'min': 800.0, 'max': 3400.0}, {'current': 1097.558, 'min': 800.0, 'max': 3400.0}], 'disk': {'/': {'total': 438.5469436645508, 'used': 157.28565979003906}}, 'gpu': 'NVIDIA A10', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA A10', 'memory_total': 24146608128}], 'memory': {'total': 503.53143310546875}}
+2024-05-31 22:34:00,090 INFO    HandlerThread:43086 [system_monitor.py:probe():224] Finished collecting system info
+2024-05-31 22:34:00,090 INFO    HandlerThread:43086 [system_monitor.py:probe():227] Publishing system info
+2024-05-31 22:34:00,090 DEBUG   HandlerThread:43086 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-05-31 22:34:00,662 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_created():271] file/dir created: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/conda-environment.yaml
+2024-05-31 22:34:01,464 DEBUG   HandlerThread:43086 [system_info.py:_save_conda():222] Saving conda packages done
+2024-05-31 22:34:01,468 INFO    HandlerThread:43086 [system_monitor.py:probe():229] Finished publishing system info
+2024-05-31 22:34:01,475 DEBUG   SenderThread:43086 [sender.py:send():378] send: files
+2024-05-31 22:34:01,475 INFO    SenderThread:43086 [sender.py:_save_file():1389] saving file wandb-metadata.json with policy now
+2024-05-31 22:34:01,528 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: python_packages
+2024-05-31 22:34:01,528 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: python_packages
+2024-05-31 22:34:01,530 DEBUG   SenderThread:43086 [sender.py:send():378] send: telemetry
+2024-05-31 22:34:01,531 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:34:01,532 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:34:01,662 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/conda-environment.yaml
+2024-05-31 22:34:01,662 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_created():271] file/dir created: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/requirements.txt
+2024-05-31 22:34:01,663 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_created():271] file/dir created: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/wandb-metadata.json
+2024-05-31 22:34:02,397 DEBUG   SenderThread:43086 [sender.py:send():378] send: config
+2024-05-31 22:34:02,577 INFO    wandb-upload_0:43086 [upload_job.py:push():130] Uploaded file /tmp/tmp5jrexagawandb/yx28z4kw-wandb-metadata.json
+2024-05-31 22:34:02,942 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:34:03,666 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_created():271] file/dir created: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:34:04,520 DEBUG   SenderThread:43086 [sender.py:send():378] send: config
+2024-05-31 22:34:05,667 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:34:06,668 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:34:08,566 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:34:12,671 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:34:14,277 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:34:16,529 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:34:16,530 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:34:18,673 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:34:19,568 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:34:24,676 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:34:25,046 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:34:30,679 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:34:30,827 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:34:31,530 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:34:31,531 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:34:31,680 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/config.yaml
+2024-05-31 22:34:34,681 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:34:36,438 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:34:41,647 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:34:42,684 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:34:46,529 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:34:46,530 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:34:46,686 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:34:46,859 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:34:50,688 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:34:51,877 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:34:56,691 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:34:57,535 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:35:00,028 DEBUG   SystemMonitor:43086 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-05-31 22:35:00,034 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:35:01,530 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:35:01,531 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:35:02,694 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:35:02,884 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:35:07,696 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:35:08,634 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:35:13,699 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:35:13,812 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:35:16,529 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:35:16,530 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:35:19,628 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:35:19,702 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:35:24,789 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:35:25,705 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:35:29,706 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:35:30,036 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:35:30,038 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:35:31,530 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:35:31,531 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:35:35,459 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:35:35,709 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:35:40,518 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:35:41,712 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:35:45,519 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:35:46,530 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:35:46,531 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:35:47,714 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:35:50,603 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:35:51,716 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:35:55,617 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:35:57,719 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:36:00,040 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:36:01,041 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:36:01,530 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:36:01,531 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:36:03,722 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:36:06,064 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:36:09,725 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:36:11,996 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:36:13,726 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:36:16,530 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:36:16,531 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:36:17,865 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:36:21,730 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:36:23,025 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:36:27,733 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:36:28,123 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:36:30,045 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:36:31,531 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:36:31,531 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:36:31,735 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:36:33,880 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:36:37,738 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:36:39,207 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:36:43,741 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:36:44,227 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:36:46,530 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:36:46,531 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:36:49,743 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:36:50,104 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:36:53,745 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:36:55,768 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:36:59,748 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:37:00,048 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:37:01,051 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:37:01,530 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:37:01,532 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:37:05,751 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:37:07,043 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:37:09,753 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:37:12,692 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:37:16,530 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:37:16,531 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:37:17,756 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:37:17,847 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:37:21,758 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:37:23,171 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:37:27,761 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:37:29,072 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:37:30,052 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:37:31,531 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:37:31,532 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:37:33,763 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:37:34,604 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:37:37,765 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:37:39,674 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:37:43,768 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:37:44,793 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:37:46,531 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:37:46,533 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:37:49,771 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:37:50,792 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:37:56,018 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:37:57,774 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:38:00,054 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:38:01,532 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:38:01,533 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:38:01,844 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:38:03,776 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:38:07,030 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:38:07,778 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:38:12,955 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:38:13,781 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:38:16,531 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:38:16,532 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:38:17,783 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:38:18,635 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:38:23,785 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:38:24,235 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:38:27,787 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:38:29,793 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:38:30,058 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:38:31,531 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:38:31,532 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:38:33,789 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:38:34,925 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:38:39,792 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:38:40,616 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:38:45,795 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:38:45,853 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:38:46,532 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:38:46,533 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:38:51,637 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:38:51,797 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:38:56,942 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:38:57,800 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:39:00,062 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:39:01,534 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:39:01,535 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:39:01,801 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:39:02,586 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:39:07,804 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:39:08,400 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:39:13,715 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:39:13,807 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:39:16,532 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:39:16,533 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:39:19,476 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:39:19,810 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:39:24,477 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:39:25,813 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:39:29,730 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:39:30,065 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:39:31,532 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:39:31,533 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:39:31,815 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:39:34,912 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:39:37,818 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:39:39,936 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:39:43,821 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:39:45,365 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:39:46,532 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:39:46,533 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:39:47,822 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:39:50,855 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:39:53,825 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:39:56,422 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:39:59,827 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:40:00,070 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:40:01,532 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:40:01,534 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:40:01,903 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:40:05,833 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:40:07,543 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:40:09,842 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:40:13,358 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:40:15,853 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:40:16,534 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:40:16,535 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:40:18,899 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:40:21,865 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:40:24,857 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:40:27,880 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:40:30,009 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:40:30,073 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:40:31,533 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:40:31,533 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:40:33,887 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:40:35,922 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:40:39,889 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:40:41,247 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:40:43,891 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:40:46,533 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:40:46,534 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:40:46,863 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:40:49,893 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:40:52,079 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:40:55,896 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:40:57,665 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:41:00,077 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:41:01,534 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:41:01,535 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:41:01,899 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:41:02,851 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:41:05,901 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:41:07,855 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:41:11,903 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:41:13,422 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:41:16,533 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:41:16,534 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:41:17,906 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:41:18,900 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:41:23,908 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:41:24,193 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:41:29,370 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:41:29,912 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:41:30,097 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:41:31,533 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:41:31,534 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:41:34,556 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:41:35,914 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:41:39,853 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:41:39,916 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:41:44,854 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:41:45,919 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:41:46,534 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:41:46,535 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:41:49,947 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:41:51,922 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:41:54,948 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:41:57,924 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:42:00,086 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:42:00,087 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:42:01,534 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:42:01,535 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:42:01,927 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:42:05,175 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:42:07,929 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:42:10,256 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:42:13,932 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:42:16,010 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:42:16,534 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:42:16,535 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:42:19,935 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:42:21,095 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:42:25,937 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:42:26,834 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:42:29,939 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:42:30,089 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:42:31,534 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:42:31,535 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:42:31,865 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:42:35,941 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:42:37,036 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:42:41,943 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:42:42,970 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:42:46,534 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:42:46,534 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:42:47,945 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:42:48,203 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:42:53,896 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:42:53,948 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:42:59,305 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:42:59,951 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:43:00,093 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:43:01,534 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:43:01,535 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:43:04,428 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:43:05,953 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:43:09,955 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:43:10,275 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:43:15,958 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:43:16,032 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:43:16,535 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:43:16,535 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:43:19,959 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:43:21,942 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:43:25,962 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:43:27,425 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:43:30,097 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:43:31,535 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:43:31,535 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:43:31,965 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:43:32,786 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:43:35,966 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:43:38,684 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:43:41,968 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:43:44,330 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:43:46,535 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:43:46,536 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:43:47,971 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:43:49,795 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:43:53,974 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:43:55,782 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:43:59,976 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:44:00,118 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:44:01,121 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:44:01,535 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:44:01,536 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:44:05,979 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:44:06,988 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:44:09,980 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:44:12,296 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:44:15,983 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:44:16,583 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:44:16,584 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:44:17,837 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:44:21,986 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:44:23,687 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:44:27,989 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:44:28,987 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:44:30,106 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:44:31,582 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:44:31,583 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:44:33,992 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:44:34,863 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:44:37,993 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:44:39,945 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:44:43,996 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:44:45,139 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:44:46,582 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:44:46,583 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:44:49,999 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:44:50,201 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:44:55,823 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:44:56,001 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:45:00,109 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:45:01,112 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:45:01,583 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:45:01,584 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:45:02,004 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:45:06,006 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:45:06,548 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:45:12,009 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:45:12,128 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:45:16,583 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:45:16,584 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:45:17,859 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:45:18,012 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:45:22,014 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:45:23,367 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:45:28,525 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:45:30,017 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:45:30,113 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:45:31,583 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:45:31,584 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:45:33,785 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:45:36,020 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:45:38,875 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:45:42,023 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:45:44,581 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:45:46,025 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:45:46,583 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:45:46,584 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:45:49,864 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:45:52,027 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:45:55,770 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:45:58,030 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:46:00,115 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:46:01,116 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:46:01,584 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:46:01,584 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:46:04,033 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:46:06,709 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:46:10,035 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:46:11,781 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:46:16,038 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:46:16,583 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:46:16,584 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:46:16,875 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:46:20,039 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:46:22,875 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:46:26,042 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:46:27,939 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:46:30,044 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:46:30,119 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:46:31,584 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:46:31,585 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:46:33,876 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:46:36,047 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:46:39,656 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:46:42,049 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:46:45,132 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:46:46,051 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:46:46,584 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:46:46,585 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:46:50,361 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:46:52,054 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:46:55,362 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:46:58,057 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:47:00,123 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:47:01,124 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:47:01,584 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:47:01,585 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:47:04,060 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:47:06,855 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:47:08,062 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:47:11,911 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:47:12,064 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:47:16,584 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:47:16,585 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:47:17,243 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:47:18,067 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:47:22,244 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:47:25,070 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:47:27,406 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:47:30,127 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:47:31,073 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:47:31,584 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:47:31,585 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:47:32,786 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:47:37,075 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:47:38,443 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:47:43,077 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:47:44,260 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:47:46,584 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:47:46,585 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:47:49,080 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:47:49,866 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:47:55,082 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:47:55,433 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:48:00,130 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:48:01,084 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:48:01,133 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:48:01,584 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:48:01,585 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:48:05,086 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:48:06,672 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:48:07,086 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:48:11,673 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:48:16,585 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:48:16,586 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:48:16,878 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:48:21,879 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:48:26,881 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:48:30,134 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:48:31,585 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:48:31,586 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:48:31,998 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:48:36,999 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:48:42,000 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:48:46,585 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:48:46,586 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:48:47,828 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:48:52,829 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:48:57,830 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:49:00,153 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:49:01,585 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:49:01,586 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:49:02,888 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:49:07,889 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:49:12,890 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:49:16,585 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:49:16,585 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:49:18,870 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:49:23,871 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:49:28,872 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:49:30,141 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:49:31,585 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:49:31,586 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:49:34,808 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:49:39,809 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:49:44,810 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:49:46,586 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:49:46,586 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:49:49,871 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:49:54,872 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:49:59,873 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:50:00,148 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:50:01,586 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:50:01,586 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:50:05,788 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:50:10,789 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:50:15,791 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:50:16,586 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:50:16,587 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:50:20,846 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:50:25,847 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:50:30,149 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:50:31,152 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:50:31,586 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:50:31,587 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:50:36,802 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:50:41,802 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:50:46,587 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:50:46,588 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:50:46,881 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:50:51,882 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:50:56,883 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:51:00,153 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:51:01,587 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:51:01,588 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:51:02,781 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:51:07,781 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:51:12,782 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:51:16,587 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:51:16,588 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:51:17,812 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:51:22,813 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:51:27,814 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:51:30,157 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:51:31,587 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:51:31,588 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:51:32,865 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:51:37,866 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:51:42,867 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:51:46,587 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:51:46,588 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:51:47,879 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:51:52,880 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:51:57,881 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:52:00,161 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:52:01,587 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:52:01,588 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:52:03,813 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:52:08,814 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:52:13,815 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:52:16,587 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:52:16,588 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:52:19,809 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:52:24,810 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:52:29,812 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:52:30,182 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:52:31,588 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:52:31,589 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:52:35,203 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:52:35,303 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:52:40,304 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:52:45,305 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:52:46,588 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:52:46,589 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:52:50,813 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:52:55,814 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:53:00,169 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:53:01,171 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:53:01,589 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:53:01,590 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:53:06,848 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:53:11,848 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:53:16,588 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:53:16,589 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:53:17,801 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:53:22,804 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:53:27,805 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:53:30,174 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:53:31,588 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:53:31,589 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:53:32,885 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:53:37,886 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:53:42,887 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:53:46,589 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:53:46,589 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:53:48,868 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:53:53,868 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:53:58,869 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:54:00,174 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:54:01,589 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:54:01,590 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:54:03,930 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:54:08,931 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:54:13,931 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:54:16,589 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:54:16,590 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:54:19,847 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:54:24,848 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:54:29,849 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:54:30,178 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:54:31,589 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:54:31,590 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:54:35,819 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:54:40,820 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:54:45,821 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:54:46,590 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:54:46,590 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:54:50,883 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:54:55,884 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:55:00,182 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:55:01,184 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:55:01,590 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:55:01,590 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:55:06,864 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:55:11,865 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:55:16,591 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:55:16,591 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:55:17,838 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:55:22,838 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:55:27,840 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:55:30,186 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:55:31,590 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:55:31,591 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:55:33,821 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:55:38,821 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:55:43,822 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:55:46,590 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:55:46,591 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:55:48,913 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:55:53,914 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:55:58,915 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:56:00,190 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:56:01,590 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:56:01,591 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:56:04,794 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:56:09,794 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:56:14,795 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:56:16,591 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:56:16,592 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:56:19,897 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:56:24,898 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:56:29,899 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:56:30,213 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:56:31,591 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:56:31,592 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:56:35,880 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:56:40,881 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:56:45,882 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:56:46,591 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:56:46,592 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:56:51,854 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:56:56,854 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:57:00,195 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:57:01,592 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:57:01,593 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:57:01,882 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:57:06,884 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:57:11,885 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:57:16,592 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:57:16,593 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:57:17,820 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:57:22,821 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:57:27,822 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:57:30,201 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:57:31,591 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:57:31,592 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:57:33,809 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:57:38,810 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:57:43,811 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:57:46,592 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:57:46,593 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:57:48,883 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:57:53,884 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:57:58,885 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:58:00,203 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:58:01,592 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:58:01,592 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:58:03,892 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:58:08,893 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:58:13,894 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:58:15,351 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:58:16,592 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-31 22:58:16,593 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: stop_status
+2024-05-31 22:58:19,812 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:58:22,873 DEBUG   SenderThread:43086 [sender.py:send():378] send: exit
+2024-05-31 22:58:22,874 INFO    SenderThread:43086 [sender.py:send_exit():585] handling exit code: 1
+2024-05-31 22:58:22,874 INFO    SenderThread:43086 [sender.py:send_exit():587] handling runtime: 1462
+2024-05-31 22:58:22,903 INFO    SenderThread:43086 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-05-31 22:58:22,903 INFO    SenderThread:43086 [sender.py:send_exit():593] send defer
+2024-05-31 22:58:22,903 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: defer
+2024-05-31 22:58:22,903 INFO    HandlerThread:43086 [handler.py:handle_request_defer():184] handle defer: 0
+2024-05-31 22:58:22,904 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: defer
+2024-05-31 22:58:22,904 INFO    SenderThread:43086 [sender.py:send_request_defer():609] handle sender defer: 0
+2024-05-31 22:58:22,904 INFO    SenderThread:43086 [sender.py:transition_state():613] send defer: 1
+2024-05-31 22:58:22,904 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: defer
+2024-05-31 22:58:22,904 INFO    HandlerThread:43086 [handler.py:handle_request_defer():184] handle defer: 1
+2024-05-31 22:58:22,904 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: defer
+2024-05-31 22:58:22,905 INFO    SenderThread:43086 [sender.py:send_request_defer():609] handle sender defer: 1
+2024-05-31 22:58:22,905 INFO    SenderThread:43086 [sender.py:transition_state():613] send defer: 2
+2024-05-31 22:58:22,905 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: defer
+2024-05-31 22:58:22,905 INFO    HandlerThread:43086 [handler.py:handle_request_defer():184] handle defer: 2
+2024-05-31 22:58:22,905 INFO    HandlerThread:43086 [system_monitor.py:finish():203] Stopping system monitor
+2024-05-31 22:58:22,907 DEBUG   SystemMonitor:43086 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-05-31 22:58:22,907 DEBUG   SystemMonitor:43086 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-05-31 22:58:22,907 INFO    HandlerThread:43086 [interfaces.py:finish():200] Joined cpu monitor
+2024-05-31 22:58:22,911 INFO    HandlerThread:43086 [interfaces.py:finish():200] Joined disk monitor
+2024-05-31 22:58:22,922 INFO    HandlerThread:43086 [interfaces.py:finish():200] Joined gpu monitor
+2024-05-31 22:58:22,923 INFO    HandlerThread:43086 [interfaces.py:finish():200] Joined memory monitor
+2024-05-31 22:58:22,923 INFO    HandlerThread:43086 [interfaces.py:finish():200] Joined network monitor
+2024-05-31 22:58:22,923 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: defer
+2024-05-31 22:58:22,923 INFO    SenderThread:43086 [sender.py:send_request_defer():609] handle sender defer: 2
+2024-05-31 22:58:22,923 INFO    SenderThread:43086 [sender.py:transition_state():613] send defer: 3
+2024-05-31 22:58:22,923 DEBUG   SenderThread:43086 [sender.py:send():378] send: stats
+2024-05-31 22:58:22,924 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: defer
+2024-05-31 22:58:22,924 INFO    HandlerThread:43086 [handler.py:handle_request_defer():184] handle defer: 3
+2024-05-31 22:58:22,924 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: defer
+2024-05-31 22:58:22,924 INFO    SenderThread:43086 [sender.py:send_request_defer():609] handle sender defer: 3
+2024-05-31 22:58:22,924 INFO    SenderThread:43086 [sender.py:transition_state():613] send defer: 4
+2024-05-31 22:58:22,924 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: defer
+2024-05-31 22:58:22,924 INFO    HandlerThread:43086 [handler.py:handle_request_defer():184] handle defer: 4
+2024-05-31 22:58:22,925 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: defer
+2024-05-31 22:58:22,925 INFO    SenderThread:43086 [sender.py:send_request_defer():609] handle sender defer: 4
+2024-05-31 22:58:22,925 INFO    SenderThread:43086 [sender.py:transition_state():613] send defer: 5
+2024-05-31 22:58:22,925 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: defer
+2024-05-31 22:58:22,925 INFO    HandlerThread:43086 [handler.py:handle_request_defer():184] handle defer: 5
+2024-05-31 22:58:22,925 DEBUG   SenderThread:43086 [sender.py:send():378] send: summary
+2024-05-31 22:58:22,928 INFO    SenderThread:43086 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-05-31 22:58:22,928 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: defer
+2024-05-31 22:58:22,928 INFO    SenderThread:43086 [sender.py:send_request_defer():609] handle sender defer: 5
+2024-05-31 22:58:22,928 INFO    SenderThread:43086 [sender.py:transition_state():613] send defer: 6
+2024-05-31 22:58:22,928 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: defer
+2024-05-31 22:58:22,928 INFO    HandlerThread:43086 [handler.py:handle_request_defer():184] handle defer: 6
+2024-05-31 22:58:22,928 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: defer
+2024-05-31 22:58:22,929 INFO    SenderThread:43086 [sender.py:send_request_defer():609] handle sender defer: 6
+2024-05-31 22:58:22,929 INFO    SenderThread:43086 [sender.py:transition_state():613] send defer: 7
+2024-05-31 22:58:22,929 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:58:22,929 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: defer
+2024-05-31 22:58:22,929 INFO    HandlerThread:43086 [handler.py:handle_request_defer():184] handle defer: 7
+2024-05-31 22:58:22,929 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: defer
+2024-05-31 22:58:22,929 INFO    SenderThread:43086 [sender.py:send_request_defer():609] handle sender defer: 7
+2024-05-31 22:58:23,355 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:58:23,355 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_created():271] file/dir created: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/wandb-summary.json
+2024-05-31 22:58:23,873 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-31 22:58:25,040 INFO    SenderThread:43086 [sender.py:transition_state():613] send defer: 8
+2024-05-31 22:58:25,040 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: poll_exit
+2024-05-31 22:58:25,040 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: defer
+2024-05-31 22:58:25,041 INFO    HandlerThread:43086 [handler.py:handle_request_defer():184] handle defer: 8
+2024-05-31 22:58:25,042 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: defer
+2024-05-31 22:58:25,042 INFO    SenderThread:43086 [sender.py:send_request_defer():609] handle sender defer: 8
+2024-05-31 22:58:25,042 INFO    SenderThread:43086 [job_builder.py:build():432] Attempting to build job artifact
+2024-05-31 22:58:25,043 INFO    SenderThread:43086 [job_builder.py:_get_source_type():565] is repo sourced job
+2024-05-31 22:58:25,093 INFO    SenderThread:43086 [job_builder.py:build():541] adding wandb-job metadata file
+2024-05-31 22:58:25,097 INFO    SenderThread:43086 [sender.py:transition_state():613] send defer: 9
+2024-05-31 22:58:25,097 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: defer
+2024-05-31 22:58:25,098 DEBUG   SenderThread:43086 [sender.py:send():378] send: artifact
+2024-05-31 22:58:25,098 INFO    HandlerThread:43086 [handler.py:handle_request_defer():184] handle defer: 9
+2024-05-31 22:58:25,356 INFO    Thread-12 :43086 [dir_watcher.py:_on_file_modified():288] file/dir modified: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:58:25,875 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-31 22:58:26,067 INFO    SenderThread:43086 [sender.py:send_artifact():1467] sent artifact job-https___github.com_JohnZhan2023_COMP130207.git_PJ2_BiLSTM_CRF_main.py - {'id': 'QXJ0aWZhY3Q6ODU1OTA0OTUw', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjE4MTA0NTIwNg==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6ODU1OTExMzY2', 'versionIndex': 3}}}
+2024-05-31 22:58:26,068 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: defer
+2024-05-31 22:58:26,068 INFO    SenderThread:43086 [sender.py:send_request_defer():609] handle sender defer: 9
+2024-05-31 22:58:26,068 INFO    SenderThread:43086 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-05-31 22:58:26,358 INFO    SenderThread:43086 [dir_watcher.py:finish():388] scan: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files
+2024-05-31 22:58:26,359 INFO    SenderThread:43086 [dir_watcher.py:finish():402] scan save: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/requirements.txt requirements.txt
+2024-05-31 22:58:26,360 INFO    SenderThread:43086 [dir_watcher.py:finish():402] scan save: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/wandb-metadata.json wandb-metadata.json
+2024-05-31 22:58:26,360 INFO    SenderThread:43086 [dir_watcher.py:finish():402] scan save: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/wandb-summary.json wandb-summary.json
+2024-05-31 22:58:26,366 INFO    SenderThread:43086 [dir_watcher.py:finish():402] scan save: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/conda-environment.yaml conda-environment.yaml
+2024-05-31 22:58:26,370 INFO    SenderThread:43086 [dir_watcher.py:finish():402] scan save: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log output.log
+2024-05-31 22:58:26,376 INFO    SenderThread:43086 [dir_watcher.py:finish():402] scan save: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/config.yaml config.yaml
+2024-05-31 22:58:26,387 INFO    SenderThread:43086 [sender.py:transition_state():613] send defer: 10
+2024-05-31 22:58:26,388 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: poll_exit
+2024-05-31 22:58:26,389 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: defer
+2024-05-31 22:58:26,394 INFO    HandlerThread:43086 [handler.py:handle_request_defer():184] handle defer: 10
+2024-05-31 22:58:26,396 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: defer
+2024-05-31 22:58:26,396 INFO    SenderThread:43086 [sender.py:send_request_defer():609] handle sender defer: 10
+2024-05-31 22:58:26,396 INFO    SenderThread:43086 [file_pusher.py:finish():169] shutting down file pusher
+2024-05-31 22:58:26,879 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-31 22:58:26,880 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: poll_exit
+2024-05-31 22:58:27,136 INFO    wandb-upload_0:43086 [upload_job.py:push():130] Uploaded file /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/requirements.txt
+2024-05-31 22:58:27,582 INFO    wandb-upload_2:43086 [upload_job.py:push():130] Uploaded file /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/conda-environment.yaml
+2024-05-31 22:58:27,751 INFO    wandb-upload_4:43086 [upload_job.py:push():130] Uploaded file /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/config.yaml
+2024-05-31 22:58:27,781 INFO    wandb-upload_3:43086 [upload_job.py:push():130] Uploaded file /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/output.log
+2024-05-31 22:58:27,880 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-31 22:58:27,881 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: poll_exit
+2024-05-31 22:58:28,882 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-31 22:58:28,883 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: poll_exit
+2024-05-31 22:58:29,883 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-31 22:58:29,884 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: poll_exit
+2024-05-31 22:58:30,885 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-31 22:58:30,885 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:58:30,886 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: poll_exit
+2024-05-31 22:58:31,886 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-31 22:58:31,887 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: poll_exit
+2024-05-31 22:58:32,888 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-31 22:58:32,889 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: poll_exit
+2024-05-31 22:58:33,889 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-31 22:58:33,890 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: poll_exit
+2024-05-31 22:58:34,891 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-31 22:58:34,892 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: poll_exit
+2024-05-31 22:58:35,892 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-31 22:58:35,893 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:58:35,893 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: poll_exit
+2024-05-31 22:58:36,894 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-31 22:58:36,895 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: poll_exit
+2024-05-31 22:58:37,895 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-31 22:58:37,896 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: poll_exit
+2024-05-31 22:58:38,897 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-31 22:58:38,898 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: poll_exit
+2024-05-31 22:58:39,899 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-31 22:58:39,899 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: poll_exit
+2024-05-31 22:58:40,900 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:58:40,901 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-31 22:58:40,902 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: poll_exit
+2024-05-31 22:58:41,902 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-31 22:58:41,903 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: poll_exit
+2024-05-31 22:58:42,904 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-31 22:58:42,905 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: poll_exit
+2024-05-31 22:58:43,905 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-31 22:58:43,906 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: poll_exit
+2024-05-31 22:58:44,907 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-31 22:58:44,908 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: poll_exit
+2024-05-31 22:58:45,908 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-31 22:58:45,910 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: status_report
+2024-05-31 22:58:45,910 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: poll_exit
+2024-05-31 22:58:46,911 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-31 22:58:46,912 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: poll_exit
+2024-05-31 22:58:47,911 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-31 22:58:47,913 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: poll_exit
+2024-05-31 22:58:48,539 INFO    wandb-upload_1:43086 [upload_job.py:push():130] Uploaded file /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/files/wandb-summary.json
+2024-05-31 22:58:48,741 INFO    Thread-11 :43086 [sender.py:transition_state():613] send defer: 11
+2024-05-31 22:58:48,741 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: defer
+2024-05-31 22:58:48,742 INFO    HandlerThread:43086 [handler.py:handle_request_defer():184] handle defer: 11
+2024-05-31 22:58:48,742 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: defer
+2024-05-31 22:58:48,742 INFO    SenderThread:43086 [sender.py:send_request_defer():609] handle sender defer: 11
+2024-05-31 22:58:48,742 INFO    SenderThread:43086 [file_pusher.py:join():175] waiting for file pusher
+2024-05-31 22:58:48,742 INFO    SenderThread:43086 [sender.py:transition_state():613] send defer: 12
+2024-05-31 22:58:48,743 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: defer
+2024-05-31 22:58:48,743 INFO    HandlerThread:43086 [handler.py:handle_request_defer():184] handle defer: 12
+2024-05-31 22:58:48,743 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: defer
+2024-05-31 22:58:48,743 INFO    SenderThread:43086 [sender.py:send_request_defer():609] handle sender defer: 12
+2024-05-31 22:58:48,743 INFO    SenderThread:43086 [file_stream.py:finish():601] file stream finish called
+2024-05-31 22:58:48,913 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-31 22:58:50,435 INFO    SenderThread:43086 [file_stream.py:finish():605] file stream finish is done
+2024-05-31 22:58:50,435 INFO    SenderThread:43086 [sender.py:transition_state():613] send defer: 13
+2024-05-31 22:58:50,435 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: poll_exit
+2024-05-31 22:58:50,435 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: defer
+2024-05-31 22:58:50,435 INFO    HandlerThread:43086 [handler.py:handle_request_defer():184] handle defer: 13
+2024-05-31 22:58:50,436 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: defer
+2024-05-31 22:58:50,436 INFO    SenderThread:43086 [sender.py:send_request_defer():609] handle sender defer: 13
+2024-05-31 22:58:50,436 INFO    SenderThread:43086 [sender.py:transition_state():613] send defer: 14
+2024-05-31 22:58:50,436 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: defer
+2024-05-31 22:58:50,436 DEBUG   SenderThread:43086 [sender.py:send():378] send: final
+2024-05-31 22:58:50,436 INFO    HandlerThread:43086 [handler.py:handle_request_defer():184] handle defer: 14
+2024-05-31 22:58:50,436 DEBUG   SenderThread:43086 [sender.py:send():378] send: footer
+2024-05-31 22:58:50,437 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: defer
+2024-05-31 22:58:50,437 INFO    SenderThread:43086 [sender.py:send_request_defer():609] handle sender defer: 14
+2024-05-31 22:58:50,437 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-31 22:58:50,438 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: poll_exit
+2024-05-31 22:58:50,438 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-31 22:58:50,439 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: poll_exit
+2024-05-31 22:58:50,439 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: server_info
+2024-05-31 22:58:50,439 DEBUG   SenderThread:43086 [sender.py:send_request():405] send_request: server_info
+2024-05-31 22:58:50,442 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: get_summary
+2024-05-31 22:58:50,442 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: sampled_history
+2024-05-31 22:58:50,443 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: internal_messages
+2024-05-31 22:58:50,733 INFO    MainThread:43086 [wandb_run.py:_footer_history_summary_info():3994] rendering history
+2024-05-31 22:58:50,734 INFO    MainThread:43086 [wandb_run.py:_footer_history_summary_info():4026] rendering summary
+2024-05-31 22:58:50,734 INFO    MainThread:43086 [wandb_run.py:_footer_sync_info():3953] logging synced files
+2024-05-31 22:58:50,735 DEBUG   HandlerThread:43086 [handler.py:handle_request():158] handle_request: shutdown
+2024-05-31 22:58:50,735 INFO    HandlerThread:43086 [handler.py:finish():882] shutting down handler
+2024-05-31 22:58:51,439 INFO    WriterThread:43086 [datastore.py:close():296] close: /cephfs/zhanjh/COMP130207/PJ2/wandb/run-20240531_223357-t2d1qx0r/run-t2d1qx0r.wandb
+2024-05-31 22:58:51,733 INFO    SenderThread:43086 [sender.py:finish():1545] shutting down sender
+2024-05-31 22:58:51,733 INFO    SenderThread:43086 [file_pusher.py:finish():169] shutting down file pusher
+2024-05-31 22:58:51,733 INFO    SenderThread:43086 [file_pusher.py:join():175] waiting for file pusher
