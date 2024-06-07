@@ -90,3 +90,11 @@ class HMM():
         self.emission_matrix /= ( np.sum(self.emission_matrix, axis = 1, keepdims=True) )
         
         return self.transition_matrix, self.emission_matrix, self.initial_state
+    def save(self, path):
+        np.save(f"{path}_transition_matrix.npy", self.transition_matrix)
+        np.save(f"{path}_emission_matrix.npy", self.emission_matrix)
+        np.save(f"{path}_initial_state.npy", self.initial_state)
+    def load(self, path):
+        self.transition_matrix = np.load(f"{path}_transition_matrix.npy")
+        self.emission_matrix = np.load(f"{path}_emission_matrix.npy")
+        self.initial_state = np.load(f"{path}_initial_state.npy")

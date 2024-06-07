@@ -17,8 +17,12 @@ def main(args):
 
     test_data, test_labels = dataLoader.get_raw_test_data()
     crf = CRF()
-    # training
-    crf.fit(train_data, train_labels)
+    if args.train:
+        # training
+        crf.fit(train_data, train_labels)
+        crf.save(f"model/{args.data}/crf_model")
+    else:
+        crf.load(f"model/{args.data}/crf_model")
     # val
     result = crf.predict(test_data)
     # Write the results to a file
@@ -33,5 +37,6 @@ if "__main__" == __name__:
     import argparse
     parser = argparse.ArgumentParser(description="CRF")
     parser.add_argument("--data", type=str, default="Chinese", help="Chinese or English")
+    parser.add_argument("--train", type=int, default=0, help="true or false")
     args = parser.parse_args()
     main(args)

@@ -1,5 +1,5 @@
 import sklearn_crfsuite
-
+import pickle
 class CRF:
     def __init__(self):
         self.model = sklearn_crfsuite.CRF(
@@ -36,6 +36,14 @@ class CRF:
     
     def score(self, X, y):
         return self.model.score(X, y)
+    
+    def save(self, path):
+        with open(path+".pkl", 'wb') as file:
+            pickle.dump(self.model, file)
+    def load(self, path):
+        self.model = sklearn_crfsuite.CRF()
+        with open(path+".pkl", 'rb') as file:
+            self.model = pickle.load(file)
     
 def word2features(sent, i):
 

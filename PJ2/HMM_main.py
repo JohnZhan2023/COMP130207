@@ -13,13 +13,19 @@ def main(args):
     dataLoader = dataloader(train_path, test_path)
     obs_num = dataLoader.get_data_num()
     state_num = dataLoader.get_label_num()
-    hmm = HMM(obs_num, state_num)
+    
     train_data, train_labels = dataLoader.get_data_list()
 
     test_data, test_labels = dataLoader.get_test_data_list()
-
-    # training
-    hmm.train(train_data, train_labels)
+    hmm = HMM(obs_num, state_num)
+    if args.train:
+        # training
+        print("Training the model")
+        hmm.train(train_data, train_labels)
+        hmm.save(f"model/{args.data}/hmm_model")
+    else:
+        print("Loading the model")
+        hmm.load(f"model/{args.data}/hmm_model")
     # val
     result = hmm.package_backward(test_data)
     # Write the results to a file
@@ -40,5 +46,6 @@ if "__main__" == __name__:
     import argparse
     parser = argparse.ArgumentParser(description="HMM")
     parser.add_argument("--data", type=str, default="Chinese", help="Chinese or English")
+    parser.add_argument("--train", type=int, default=0, help="true or false")
     args = parser.parse_args()
     main(args)

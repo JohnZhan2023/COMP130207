@@ -4,55 +4,49 @@ from BiLSTM_CRF import BiLSTM_CRF
 import numpy as np
 import torch
 import os
+from BiLSTM_CRF import train
 from tqdm import tqdm
-import wandb
+# import wandb
 
 def main(args):
-    wandb.init(project='bilstm_crf',entity='zhanjiahao384')
-    wandb.config.update(args)
+    # wandb.init(project='bilstm_crf',entity='zhanjiahao384')
+    # wandb.config.update(args)
     if args.data =="Chinese":
         train_path = "NER/Chinese/train.txt"
         test_path = "NER/Chinese/validation.txt"
     else:
         train_path = "NER/English/train.txt"
         test_path = "NER/English/validation.txt"
-    dataLoader = dataloader(train_path, test_path)
 
+    model, dataloader = train(train_path, test_path, epochs=100, train=args.train, data = args.data)
+    testing_data, testing_labels = dataloader.get_raw_test_data()
+    eval_tags = []
+    for i in range(len(testing_data)):
+        testing_data[i] = torch.tensor(testing_data[i], dtype=torch.long)
+        eval_tags.append(model(testing_data[i]))
     
-    train_data, train_labels = dataLoader.get_data_list()
-
-    test_data, test_labels = dataLoader.get_test_data_list()
     
-    # contruct the label2id and num
-    label2id = dataLoader.returnlabel2id()
-    label_num = dataLoader.get_label_num()
-    data_num = dataLoader.get_data_num()
-    label2id["START"] = label_num
-    label2id["STOP"] = label_num + 1
-    label_num += 2
-    dataLoader.print_map()
-    bilstm_crf = BiLSTM_CRF(data_num, label2id, label_num, embedding_dim=8, hidden_dim=4, batch_size=256)
-    
-    # we change list to tensor
-    train_data = [torch.tensor(i, dtype=torch.long) for i in train_data]
-    train_labels = [torch.tensor(i, dtype=torch.long) for i in train_labels]
-    test_data_ = [torch.tensor(i, dtype=torch.long) for i in test_data]
-    # training  
-    bilstm_crf.train(train_data, train_labels, epochs=10)
-    result = bilstm_crf.forward(test_data_)
-    print("finish training.")
     # Write the results to a file
-    str_data, str_labels = dataLoader.convert_to_string(test_data, result)
-    with open(f"NER/{args.data}/bilstem_crf_result.txt", "w",encoding='utf-8') as f:
-        for i in range(len(test_data_)):
-            for j in range(len(test_data_[i])):
-                f.write(str_data[i][j] + " " + str(str_labels[i][j]) + "\n")
+    dataloader.updateList("<START>","<STOP>")
+    id2label = dataloader.returnid2label()
+    id2data = dataloader.returnid2data()
+    for i in range(len(eval_tags)):
+
+        eval_tags[i] = [id2label[j] for j in eval_tags[i]]
+
+        testing_data[i] = [id2data[j] for j in testing_data[i]]
+
+    with open(f"NER/{args.data}/bilstm_crf_result.txt", "w",encoding='utf-8') as f:
+        for i in range(len(eval_tags)):
+            for j in range(len(eval_tags[i])):
+                f.write(testing_data[i][j] + " " + str(eval_tags[i][j]) + "\n")
             f.write("\n")
     print("finish generating the result file.")
-    bilstm_crf.save(f"NER/{args.data}/bilstm_crf_model.pth")
+    model.save(f"model/{args.data}/bilstm_crf_model.pth")
 if "__main__" == __name__:
     import argparse
     parser = argparse.ArgumentParser(description="BiLSTM_CRF")
     parser.add_argument("--data", type=str, default="Chinese", help="Chinese or English")
+    parser.add_argument("--train", type=int, default=0, help="true or false")
     args = parser.parse_args()
     main(args)

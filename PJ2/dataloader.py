@@ -98,6 +98,15 @@ class dataloader():
         print("the map is ",self.list_labels)
     def returnlabel2id(self):
         return {i:j for j,i in enumerate(self.list_labels)}
+    def returndata2id(self):
+        return {i:j for j,i in enumerate(self.list_data)}
+    def updateList(self, star_tag, stop_tag):
+        self.list_labels.append(star_tag)
+        self.list_labels.append(stop_tag)
+    def returnid2label(self):
+        return self.list_labels
+    def returnid2data(self):
+        return self.list_data
     
         
 
