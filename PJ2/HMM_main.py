@@ -30,7 +30,11 @@ def main(args):
     result = hmm.package_backward(test_data)
     # Write the results to a file
     str_data, str_labels = dataLoader.convert_to_string(test_data, result)
-    with open(f"NER/{args.data}/result.txt", "w",encoding='utf-8') as f:
+    if args.train == 1:
+        root=f"NER/{args.data}/result.txt"
+    else:
+        root=f"result/{args.data}_HMM.txt"
+    with open(root, "w",encoding='utf-8') as f:
         for i in range(len(test_data)):
             for j in range(len(test_data[i])):
                 f.write(str_data[i][j] + " " + str(str_labels[i][j]) + "\n")

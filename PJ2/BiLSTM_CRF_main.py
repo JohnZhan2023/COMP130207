@@ -19,8 +19,9 @@ def main(args):
         test_path = "NER/English/validation.txt"
 
     model, dataloader = train(train_path, test_path, epochs=100, train=args.train, data = args.data)
-    testing_data, testing_labels = dataloader.get_raw_test_data()
+    testing_data, testing_labels = dataloader.get_test_data_list()
     eval_tags = []
+    print("Testing the model")
     for i in range(len(testing_data)):
         testing_data[i] = torch.tensor(testing_data[i], dtype=torch.long)
         eval_tags.append(model(testing_data[i]))
@@ -36,7 +37,11 @@ def main(args):
 
         testing_data[i] = [id2data[j] for j in testing_data[i]]
 
-    with open(f"NER/{args.data}/bilstm_crf_result.txt", "w",encoding='utf-8') as f:
+    if args.train == 1:
+        root=f"NER/{args.data}/result_bilstm_crf.txt"
+    else:
+        root=f"result/{args.data}_BilstmCRF.txt"
+    with open(root, "w",encoding='utf-8') as f:
         for i in range(len(eval_tags)):
             for j in range(len(eval_tags[i])):
                 f.write(testing_data[i][j] + " " + str(eval_tags[i][j]) + "\n")

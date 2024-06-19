@@ -222,7 +222,7 @@ def train(train_path, test_path,epochs=10,train=1,data="Chinese"):
                 optimizer.step()
     else:
         print("No training.")
-        model.load(path=f"NER/{data}/Bilstm_crf_model_sota.pth")
+        model.load(path=f"model/{data}/bilstm_crf_model.pth")
     # Check predictions after training
     with torch.no_grad():
         precheck_sent = torch.tensor(training_data[0], dtype=torch.long)
